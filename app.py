@@ -28,47 +28,30 @@ st.write(
 # =========================
 st.subheader("📋 Variables clínicas")
 
-glucosa = st.number_input(
-    "Nivel de glucosa (mg/dL)",
-    min_value=0.0,
-    max_value=300.0,
-    value=120.0
-)
+embarazos = st.number_input("Número de embarazos", 0, 20, 1)
+glucosa = st.number_input("Nivel de glucosa", 0.0, 300.0, 120.0)
+presion = st.number_input("Presión arterial", 0.0, 200.0, 70.0)
+pliegue = st.number_input("Pliegue cutáneo", 0.0, 100.0, 20.0)
+insulina = st.number_input("Insulina", 0.0, 900.0, 80.0)
+imc = st.number_input("Índice de masa corporal (IMC)", 0.0, 70.0, 25.0)
+pedigri = st.number_input("Diabetes Pedigree Function", 0.0, 3.0, 0.5)
+edad = st.number_input("Edad", 0, 120, 30)
 
-presion = st.number_input(
-    "Presión arterial (mm Hg)",
-    min_value=0.0,
-    max_value=200.0,
-    value=70.0
-)
-
-imc = st.number_input(
-    "Índice de Masa Corporal (IMC)",
-    min_value=0.0,
-    max_value=70.0,
-    value=25.0
-)
-
-edad = st.number_input(
-    "Edad (años)",
-    min_value=0,
-    max_value=120,
-    value=30
-)
 
 # =========================
 # Predicción
 # =========================
 if st.button("🔍 Realizar predicción"):
-    datos = np.array([[glucosa, presion, imc, edad]])
+    datos = np.array([[embarazos, glucosa, presion, pliegue,
+                       insulina, imc, pedigri, edad]])
+
     prediccion = modelo.predict(datos)[0]
 
     st.subheader("📊 Resultado")
-
     if prediccion == 1:
-        st.error("⚠️ El modelo predice **PRESENCIA de diabetes**")
+        st.error("⚠️ El modelo predice PRESENCIA de diabetes")
     else:
-        st.success("✅ El modelo predice **AUSENCIA de diabetes**")
+        st.success("✅ El modelo predice AUSENCIA de diabetes")
 
 # =========================
 # Información del estudiante
