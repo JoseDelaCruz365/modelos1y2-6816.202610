@@ -17,6 +17,7 @@ st.set_page_config(
 )
 
 st.title("🩺 Predicción de Diabetes")
+st.write("El modelo espera:", modelo.n_features_in_, "variables")
 st.write(
     "Ingrese los datos clínicos del paciente para predecir "
     "la presencia o ausencia de diabetes."
