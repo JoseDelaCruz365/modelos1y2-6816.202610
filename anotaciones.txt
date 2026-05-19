@@ -1,0 +1,8 @@
+Crea una aplicación web en Streamlit para desplegar un modelo de machine learning
+entrenado con un dataset de registros médicos de pacientes con diabetes.
+El modelo debe estar guardado en formato .pkl y cargarse usando joblib.
+La aplicación debe permitir al usuario ingresar variables clínicas como glucosa,
+presión arterial, índice de masa corporal y edad, y mostrar la predicción sobre
+la presencia o ausencia de diabetes.
+La interfaz debe ser simple y clara, e incluir el nombre del estudiante,
+su código ISIL y un enlace al cuaderno de Google Colab.
