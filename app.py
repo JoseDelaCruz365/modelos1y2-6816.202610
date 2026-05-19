@@ -75,7 +75,7 @@ if st.button("🔍 Realizar predicción"):
 st.markdown("---")
 st.markdown("### 👨‍🎓 Información del estudiante")
 st.write("**Nombre:** JOSE MIGUEL DE LA CRUZ GAMARRA")
-st.write("**Código ISIL:** 6816.202610")
+st.write("**Código ISIL:** 73083425")
 st.markdown(
     "**Cuaderno en Google Colab:** "
     "[Abrir notebook](https://colab.research.google.com/drive/1SSDKd3iUkqNtUzMGDZ9i3HFMvTq5_xkl?usp=sharing)"
